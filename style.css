@@ -145,3 +145,42 @@ body::before {
 .terms a:hover {
   text-decoration: underline;
 }
+
+.input-box {
+  position: relative;
+  margin: 20px 0;
+}
+
+.form-control {
+  width: 50%;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-control:focus {
+  border: 2px solid #555;
+  outline: none;
+}
+
+.form-control::placeholder {
+  color: transparent;
+}
+
+label {
+  position: absolute;
+  color: #737373;
+  font-size: 16px;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  transition: all 0.2s ease;
+}
+
+.form-control:focus ~ label,
+  .form-control:not(:placeholder-shown) ~ label {
+    top: 9px;
+    font-size: 10px;
+    color: #c4b0b0;
+  }
